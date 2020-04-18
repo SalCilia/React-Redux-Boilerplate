@@ -6,8 +6,6 @@
   "scripts": {
     "lintJS": "eslint --fix ./src",
     "lintCSS": "stylelint src/**/*.css",
-    "precommit": "npm run lintJS --loglevel=silent && npm run lintCSS --loglevel=silent",
-    "prepush": "npm run test",
     "test": "babel-node node_modules/.bin/_mocha --require ./test/index.js -c src/**/*.test.js",
     "browser": "cross-env NODE_ENV=development babel-node ./server.js",
     "build": "webpack --config ./webpack.config.prod.js",
